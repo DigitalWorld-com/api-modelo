@@ -1,6 +1,9 @@
 package com.digitalworlds.api.base.controllers;
 
+import com.digitalworlds.api.base.models.CulturaObject;
 import com.digitalworlds.api.base.services.GreetingService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +25,8 @@ public class GreetingController {
     }
 
     @GetMapping("/data")
-    public String getExternalData() {
-        return greetingService.processApiCall();
+    public ResponseEntity<CulturaObject> getExternalData() throws JsonProcessingException {
+        return ResponseEntity.ok(greetingService.processApiCall());
     }
 
     @PostMapping("/greeting")
