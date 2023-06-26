@@ -1,0 +1,9 @@
+INSERT INTO greeting VALUES(1, 'Hello world');
+INSERT INTO greeting VALUES(2, 'Hello world');
+INSERT INTO greeting VALUES(3, 'Hello world');
+INSERT INTO greeting VALUES(4, 'Hello world');
+INSERT INTO greeting VALUES(5, 'Hello world');
+INSERT INTO greeting VALUES(6, 'Hello world');
+INSERT INTO greeting VALUES(7, 'Hello world');
+INSERT INTO greeting VALUES(8, 'Hello world');
+INSERT INTO greeting VALUES(9, 'Hello world');
