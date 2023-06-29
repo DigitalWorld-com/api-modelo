@@ -1,15 +1,16 @@
 package com.digitalworlds.api.base.controllers;
 
-import com.digitalworlds.api.base.models.CulturaObject;
+import com.digitalworlds.api.base.entities.GreetingDTO;
 import com.digitalworlds.api.base.models.CulturaObjectDTO;
 import com.digitalworlds.api.base.services.GreetingService;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -21,9 +22,9 @@ public class GreetingController {
         this.greetingService = greetingService;
     }
 
-    @GetMapping("/greeting")
-    public String greeting() {
-        return "Hello world!";
+    @GetMapping("/greetings")
+    public List<GreetingDTO> greeting() {
+        return greetingService.getAllGreetings();
     }
 
     @GetMapping("/data")
